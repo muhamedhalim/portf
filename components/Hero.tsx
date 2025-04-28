@@ -1,8 +1,9 @@
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaLinkedin, FaLocationArrow } from "react-icons/fa6";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { FaFacebook, FaWhatsapp, FaGithub, FaInstagram } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -59,15 +60,70 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi! I&apos;m Mohamed,full stack Developer
           </p>
-
-          <a href="#about">
-            <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <div className="">
+            <a href="https://drive.google.com/file/d/1LbDLWQvu90RiARGX7QDYQnElhWkGBPif/view?usp=sharing">
+              <MagicButton
+                title="My Resume"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+            <a href="https://1drv.ms/b/c/f329c2f1197d2fab/EaUG5FoUXXdCt59yTqMADBcBPlelJnfC8mSiJSWgwWlVbA">
+              <MagicButton
+                title="Full Stack Diploma"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+          </div>
         </div>
+      </div>
+      <div className="flex justify-center md:gap-2 gap-2">
+        <a
+          href="https://www.facebook.com/mabdalhalim2002"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="w-16 h-16 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-purple hover:scale-110 transition-all">
+            <FaFacebook className="text-white text-xl w-9 h-9 " />
+          </div>
+        </a>
+        <a
+          href="https://wa.me/01114922929"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="w-16 h-16 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-purple hover:scale-110 transition-all">
+            <FaWhatsapp className="text-white text-xl w-9 h-9 " />
+          </div>
+        </a>
+        <a
+          href="https://github.com/muhamedhalim"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="w-16 h-16 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-purple hover:scale-110 transition-all">
+            <FaGithub className="text-white text-xl w-9 h-9 " />
+          </div>
+        </a>
+        <a
+          href="https://www.instagram.com/mabdalhalim2002/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="w-16 h-16 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-purple hover:scale-110 transition-all">
+            <FaInstagram className="text-white text-xl w-9 h-9 " />
+          </div>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/mohamed-halem-3875242b5/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="w-16 h-16 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-purple hover:scale-110 transition-all">
+            <FaLinkedin className="text-white text-xl w-9 h-9 " />
+          </div>
+        </a>
       </div>
     </div>
   );

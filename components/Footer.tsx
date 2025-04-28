@@ -1,7 +1,7 @@
 import { FaFacebook, FaWhatsapp, FaGithub, FaInstagram } from "react-icons/fa";
 import MagicButton from "./MagicButton";
 import Image from "next/image";
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaLinkedin, FaLocationArrow } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -41,18 +41,51 @@ const Footer = () => {
         </p>
 
         <div className="flex items-center md:gap-3 gap-6">
-          <div className="w-16 h-16 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-purple-500 hover:scale-110 transition-all">
-            <FaFacebook className="text-white text-xl" />
-          </div>
-          <div className="w-16 h-16 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-purple-500 hover:scale-110 transition-all">
-            <FaWhatsapp className="text-white text-xl" />
-          </div>
-          <div className="w-16 h-16 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-purple-500 hover:scale-110 transition-all">
-            <FaGithub className="text-white text-xl " />
-          </div>
-          <div className="w-16 h-16 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-purple-500 hover:scale-110 transition-all">
-            <FaInstagram className="text-white text-xl" />
-          </div>
+          <a
+            href="https://www.facebook.com/mabdalhalim2002"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="w-16 h-16 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-purple hover:scale-110 transition-all">
+              <FaFacebook className="text-white text-xl w-9 h-9 " />
+            </div>
+          </a>
+          <a
+            href="https://wa.me/01114922929"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="w-16 h-16 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-purple hover:scale-110 transition-all">
+              <FaWhatsapp className="text-white text-xl w-9 h-9 " />
+            </div>
+          </a>
+          <a
+            href="https://github.com/muhamedhalim"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="w-16 h-16 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-purple hover:scale-110 transition-all">
+              <FaGithub className="text-white text-xl w-9 h-9 " />
+            </div>
+          </a>
+          <a
+            href="https://www.instagram.com/mabdalhalim2002/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="w-16 h-16 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-purple hover:scale-110 transition-all">
+              <FaInstagram className="text-white text-xl w-9 h-9 " />
+            </div>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mohamed-halem-3875242b5/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="w-16 h-16 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-purple hover:scale-110 transition-all">
+              <FaLinkedin className="text-white text-xl w-9 h-9 " />
+            </div>
+          </a>
         </div>
       </div>
     </footer>

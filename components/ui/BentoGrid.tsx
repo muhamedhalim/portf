@@ -54,7 +54,6 @@ export const BentoGridItem = ({
 }) => {
   const leftLists = ["ReactJS", "Express", "Typescript"];
   const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
-
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -70,43 +69,50 @@ export const BentoGridItem = ({
         className
       )}
       style={{
-        background: "rgb(4,7,29)",
-        backgroundColor:
+        background:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
-        <div className="w-full h-full absolute">
-          {img && (
+        {/* الصورة الأساسية */}
+        {img && (
+          <div className="w-full h-full absolute">
             <Image
               src={img}
-              alt={img}
-              className={cn(imgClassName, "object-cover object-center ")}
+              alt="Main Image"
+              className={cn(imgClassName, "object-cover object-center")}
               width={200}
               height={200}
+              loading="lazy"
             />
-          )}
-        </div>
-        <div
-          className={`absolute right-0 -bottom-5 ${
-            id === 5 && "w-full opacity-80"
-          }`}
-        >
-          {spareImg && (
+          </div>
+        )}
+
+        {/* صورة إضافية */}
+        {spareImg && (
+          <div
+            className={`absolute right-0 -bottom-5 ${
+              id === 5 && "w-full opacity-80"
+            }`}
+          >
             <Image
               src={spareImg}
-              alt={spareImg}
+              alt="Spare Image"
               width={220}
               height={220}
               className="object-cover object-center w-full h-full"
             />
-          )}
-        </div>
+          </div>
+        )}
+
+        {/* الخلفية المتحركة */}
         {id === 6 && (
           <BackgroundGradientAnimation>
             <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
           </BackgroundGradientAnimation>
         )}
+
+        {/* المحتوى */}
         <div
           className={cn(
             titleClassName,
@@ -116,12 +122,14 @@ export const BentoGridItem = ({
           <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
-          <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
-          >
+          <div className="font-sans text-lg lg:text-3xl max-w-96 font-bold z-10">
             {title}
           </div>
+
+          {/* كرة الكرة الدوارة */}
           {id === 2 && <GridGlobe />}
+
+          {/* قائمة المهارات */}
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
@@ -148,20 +156,20 @@ export const BentoGridItem = ({
               </div>
             </div>
           )}
+
+          {/* زر النسخ والأنيميشن */}
           {id === 6 && (
             <div className="mt-5 relative">
-              <div
-                className={`absolute -bottom-5 right-0 ${
-                  copied ? "block" : "block"
-                }`}
-              >
-                <LottieAnimation
-                  animationData={animationData}
-                  loop={copied}
-                  autoplay={copied}
-                  style={{ width: 300, height: 150 }}
-                />
-              </div>
+              {copied && (
+                <div className="absolute -bottom-5 right-0">
+                  <LottieAnimation
+                    animationData={animationData}
+                    loop
+                    autoplay
+                    style={{ width: 300, height: 150 }}
+                  />
+                </div>
+              )}
               <MagicButton
                 title={copied ? "Email is Copied!" : "Copy my email address"}
                 icon={<IoCopyOutline />}

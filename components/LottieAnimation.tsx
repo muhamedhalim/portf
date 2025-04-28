@@ -1,15 +1,27 @@
-"use client"; 
+"use client";
 
 import Lottie from "lottie-react";
-import animationData from "@/data/confetti.json"; 
+import type { CSSProperties } from "react";
 
-const LottieAnimation = () => {
+interface LottieAnimationProps {
+  animationData: object;
+  loop?: boolean;
+  autoplay?: boolean;
+  style?: CSSProperties;
+}
+
+const LottieAnimation = ({
+  animationData,
+  loop = true,
+  autoplay = true,
+  style = { width: 300, height: 150 },
+}: LottieAnimationProps) => {
   return (
     <Lottie
       animationData={animationData}
-      loop={true}
-      autoplay={true}
-      style={{ width: 300, height: 150 }}
+      loop={loop}
+      autoplay={autoplay}
+      style={style}
     />
   );
 };
